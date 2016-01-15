@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "PCDialogBoxView.h"
 
 @interface AppDelegate ()
 
@@ -16,9 +17,52 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    UIButton *nameButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    nameButton.backgroundColor = [UIColor redColor];
+    [nameButton setTitle:@"昵称/性别" forState:UIControlStateNormal];
+    nameButton.tag = PCDialogBoxViewStyleNickname;
+    [nameButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *phoneButton = [[UIButton alloc] initWithFrame:CGRectMake(210, 100, 100, 100)];
+    phoneButton.backgroundColor = [UIColor redColor];
+    [phoneButton setTitle:@"电话" forState:UIControlStateNormal];
+    phoneButton.tag = PCDialogBoxViewStylePhone;
+    [phoneButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *addressButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 210, 100, 100)];
+    addressButton.backgroundColor = [UIColor redColor];
+    [addressButton setTitle:@"地址" forState:UIControlStateNormal];
+    addressButton.tag = PCDialogBoxViewStyleAdress;
+    [addressButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *emailButton = [[UIButton alloc] initWithFrame:CGRectMake(210, 210, 100, 100)];
+    emailButton.backgroundColor = [UIColor redColor];
+    [emailButton setTitle:@"邮箱" forState:UIControlStateNormal];
+    emailButton.tag = PCDialogBoxViewStyleEmail;
+    [emailButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIViewController *viewController = [[UIViewController alloc] init];
+    viewController.view.backgroundColor = [UIColor orangeColor];
+    [viewController.view addSubview:nameButton];
+    [viewController.view addSubview:phoneButton];
+    [viewController.view addSubview:addressButton];
+    [viewController.view addSubview:emailButton];
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = viewController;
+    [self.window makeKeyAndVisible];
+
+    
     return YES;
 }
+
+- (void)clickButton:(UIButton *)sender
+{
+    PCDialogBoxView *showView = [[PCDialogBoxView alloc] initWithDetailView:self.window.rootViewController.view];
+    [showView showDetailInfoHudWithButton:sender animated:YES];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PCPullDownMenu.h
 //  PCDialogBoxView
 //
 //  Created by lyricdon on 16/1/13.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface PCPullDownMenu : UITableView
 
++ (instancetype)pullDownMenuWithView:(UIView *)aView;
 
 @end
-

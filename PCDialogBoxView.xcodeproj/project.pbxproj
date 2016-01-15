@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		85DE92511C463D9800B7B40C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE92501C463D9800B7B40C /* main.m */; };
 		85DE92541C463D9800B7B40C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE92531C463D9800B7B40C /* AppDelegate.m */; };
-		85DE92571C463D9800B7B40C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE92561C463D9800B7B40C /* ViewController.m */; };
-		85DE925A1C463D9800B7B40C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85DE92581C463D9800B7B40C /* Main.storyboard */; };
-		85DE925C1C463D9800B7B40C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85DE925B1C463D9800B7B40C /* Assets.xcassets */; };
-		85DE925F1C463D9800B7B40C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85DE925D1C463D9800B7B40C /* LaunchScreen.storyboard */; };
+		85DE92691C463E3900B7B40C /* PCDialogBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE92681C463E3900B7B40C /* PCDialogBoxView.m */; };
+		85DE92851C46461200B7B40C /* areaDict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85DE92841C46461200B7B40C /* areaDict.plist */; };
+		85DE92891C46463100B7B40C /* closed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85DE92871C46463100B7B40C /* closed@2x.png */; };
+		85DE928A1C46463100B7B40C /* sex-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85DE92881C46463100B7B40C /* sex-bg@2x.png */; };
+		85DE928C1C4646BA00B7B40C /* arrow_down_black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85DE928B1C4646BA00B7B40C /* arrow_down_black@2x.png */; };
+		85DE929B1C4648DD00B7B40C /* PCPullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE929A1C4648DD00B7B40C /* PCPullDownMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +22,15 @@
 		85DE92501C463D9800B7B40C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		85DE92521C463D9800B7B40C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		85DE92531C463D9800B7B40C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		85DE92551C463D9800B7B40C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		85DE92561C463D9800B7B40C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		85DE92591C463D9800B7B40C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		85DE925B1C463D9800B7B40C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		85DE925E1C463D9800B7B40C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85DE92601C463D9900B7B40C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85DE92671C463E3900B7B40C /* PCDialogBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDialogBoxView.h; sourceTree = "<group>"; };
+		85DE92681C463E3900B7B40C /* PCDialogBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDialogBoxView.m; sourceTree = "<group>"; };
+		85DE92841C46461200B7B40C /* areaDict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = areaDict.plist; sourceTree = "<group>"; };
+		85DE92871C46463100B7B40C /* closed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closed@2x.png"; sourceTree = "<group>"; };
+		85DE92881C46463100B7B40C /* sex-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sex-bg@2x.png"; sourceTree = "<group>"; };
+		85DE928B1C4646BA00B7B40C /* arrow_down_black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_down_black@2x.png"; sourceTree = "<group>"; };
+		85DE92991C4648DD00B7B40C /* PCPullDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCPullDownMenu.h; sourceTree = "<group>"; };
+		85DE929A1C4648DD00B7B40C /* PCPullDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPullDownMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +63,11 @@
 		85DE924E1C463D9800B7B40C /* PCDialogBoxView */ = {
 			isa = PBXGroup;
 			children = (
+				85DE92661C463E2500B7B40C /* PCDialogBoxView */,
 				85DE92521C463D9800B7B40C /* AppDelegate.h */,
 				85DE92531C463D9800B7B40C /* AppDelegate.m */,
-				85DE92551C463D9800B7B40C /* ViewController.h */,
-				85DE92561C463D9800B7B40C /* ViewController.m */,
-				85DE92581C463D9800B7B40C /* Main.storyboard */,
-				85DE925B1C463D9800B7B40C /* Assets.xcassets */,
-				85DE925D1C463D9800B7B40C /* LaunchScreen.storyboard */,
 				85DE92601C463D9900B7B40C /* Info.plist */,
+				85DE92841C46461200B7B40C /* areaDict.plist */,
 				85DE924F1C463D9800B7B40C /* Supporting Files */,
 			);
 			path = PCDialogBoxView;
@@ -77,6 +79,28 @@
 				85DE92501C463D9800B7B40C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85DE92661C463E2500B7B40C /* PCDialogBoxView */ = {
+			isa = PBXGroup;
+			children = (
+				85DE92861C46463100B7B40C /* img */,
+				85DE92671C463E3900B7B40C /* PCDialogBoxView.h */,
+				85DE92681C463E3900B7B40C /* PCDialogBoxView.m */,
+				85DE92991C4648DD00B7B40C /* PCPullDownMenu.h */,
+				85DE929A1C4648DD00B7B40C /* PCPullDownMenu.m */,
+			);
+			path = PCDialogBoxView;
+			sourceTree = "<group>";
+		};
+		85DE92861C46463100B7B40C /* img */ = {
+			isa = PBXGroup;
+			children = (
+				85DE928B1C4646BA00B7B40C /* arrow_down_black@2x.png */,
+				85DE92871C46463100B7B40C /* closed@2x.png */,
+				85DE92881C46463100B7B40C /* sex-bg@2x.png */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,9 +160,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85DE925F1C463D9800B7B40C /* LaunchScreen.storyboard in Resources */,
-				85DE925C1C463D9800B7B40C /* Assets.xcassets in Resources */,
-				85DE925A1C463D9800B7B40C /* Main.storyboard in Resources */,
+				85DE928A1C46463100B7B40C /* sex-bg@2x.png in Resources */,
+				85DE92891C46463100B7B40C /* closed@2x.png in Resources */,
+				85DE928C1C4646BA00B7B40C /* arrow_down_black@2x.png in Resources */,
+				85DE92851C46461200B7B40C /* areaDict.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,32 +174,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85DE92571C463D9800B7B40C /* ViewController.m in Sources */,
+				85DE929B1C4648DD00B7B40C /* PCPullDownMenu.m in Sources */,
 				85DE92541C463D9800B7B40C /* AppDelegate.m in Sources */,
 				85DE92511C463D9800B7B40C /* main.m in Sources */,
+				85DE92691C463E3900B7B40C /* PCDialogBoxView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		85DE92581C463D9800B7B40C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				85DE92591C463D9800B7B40C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		85DE925D1C463D9800B7B40C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				85DE925E1C463D9800B7B40C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		85DE92611C463D9900B7B40C /* Debug */ = {
@@ -262,7 +269,6 @@
 		85DE92641C463D9900B7B40C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PCDialogBoxView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lyricdon.cn.PCDialogBoxView;
@@ -273,7 +279,6 @@
 		85DE92651C463D9900B7B40C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PCDialogBoxView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lyricdon.cn.PCDialogBoxView;
