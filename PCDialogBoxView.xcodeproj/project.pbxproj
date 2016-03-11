@@ -14,7 +14,6 @@
 		85DE92891C46463100B7B40C /* closed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85DE92871C46463100B7B40C /* closed@2x.png */; };
 		85DE928A1C46463100B7B40C /* sex-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85DE92881C46463100B7B40C /* sex-bg@2x.png */; };
 		85DE928C1C4646BA00B7B40C /* arrow_down_black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85DE928B1C4646BA00B7B40C /* arrow_down_black@2x.png */; };
-		85DE929B1C4648DD00B7B40C /* PCPullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE929A1C4648DD00B7B40C /* PCPullDownMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +28,6 @@
 		85DE92871C46463100B7B40C /* closed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closed@2x.png"; sourceTree = "<group>"; };
 		85DE92881C46463100B7B40C /* sex-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sex-bg@2x.png"; sourceTree = "<group>"; };
 		85DE928B1C4646BA00B7B40C /* arrow_down_black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_down_black@2x.png"; sourceTree = "<group>"; };
-		85DE92991C4648DD00B7B40C /* PCPullDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCPullDownMenu.h; sourceTree = "<group>"; };
-		85DE929A1C4648DD00B7B40C /* PCPullDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPullDownMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +84,6 @@
 				85DE92861C46463100B7B40C /* img */,
 				85DE92671C463E3900B7B40C /* PCDialogBoxView.h */,
 				85DE92681C463E3900B7B40C /* PCDialogBoxView.m */,
-				85DE92991C4648DD00B7B40C /* PCPullDownMenu.h */,
-				85DE929A1C4648DD00B7B40C /* PCPullDownMenu.m */,
 			);
 			path = PCDialogBoxView;
 			sourceTree = "<group>";
@@ -174,7 +169,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85DE929B1C4648DD00B7B40C /* PCPullDownMenu.m in Sources */,
 				85DE92541C463D9800B7B40C /* AppDelegate.m in Sources */,
 				85DE92511C463D9800B7B40C /* main.m in Sources */,
 				85DE92691C463E3900B7B40C /* PCDialogBoxView.m in Sources */,
@@ -305,6 +299,7 @@
 				85DE92651C463D9900B7B40C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
