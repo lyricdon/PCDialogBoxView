@@ -13,8 +13,33 @@
 #define titleHeight 40 * ratio
 #define iPhone4TitleHeight 35 * ratio
 #define isIPhone4 [UIScreen mainScreen].bounds.size.height <= 480
-
+#define backColor [UIColor colorWithRed:198/255.0f green:57/255.0f blue:30/255.0f alpha:1.0]
 #define isProvince 501
+
+/**
+ *  防止数组越界崩溃
+ */
+@interface NSArray (CheckIndex)
+
+- (id)objectAtIndexCheck:(NSUInteger)index;
+
+@end
+
+@implementation NSArray (CheckIndex)
+
+- (id)objectAtIndexCheck:(NSUInteger)index
+{
+    if (index >= [self count]) {
+        return nil;
+    }
+    
+    id value = [self objectAtIndex:index];
+    if (value == [NSNull null]) {
+        return nil;
+    }
+    return value;
+}
+@end
 
 @interface PCDialogBoxView () <UITableViewDelegate, UITableViewDataSource>
 {
@@ -286,7 +311,7 @@ static NSInteger captchaCount = 60;
     __weak typeof(self) weakSelf = self;
     BOOL success = 1;
     
-#warning 请将一下代码放入发送短信的成功回调中
+#warning 请将以下代码放入发送短信的成功回调中
     if (success == YES) {
         [weakSelf.secTextInfo becomeFirstResponder];
         sender.userInteractionEnabled = NO;
@@ -687,37 +712,38 @@ static NSInteger captchaCount = 60;
     return _cover;
 }
 
-//- (NSArray *)areaData
-//{
-//    if (_areaData == nil) {
-//        NSArray *arr = [NSArray arrayWithContentsOfFile:_userControl.userAreaDictFilePath];
-//        _areaData = arr.copy;
-//    }
-//    return _areaData;
-//}
-//
-//- (NSIndexPath *)selectedIndex
-//{
-//    if (_selectedIndex == nil) {
-//        short provinceNum = 0;
-//        short cityNum = 0;
-//        for (short i = 0; i < self.areaData.count; i++) {
-//            if ([self.userControl.user.userProvince isEqualToString:self.areaData[i][@"province"]]) {
-//                provinceNum = i;
-//                break;
-//            }
-//        }
-//
-//        NSArray *arr = [self.areaData[provinceNum] valueForKey:@"city"];
-//        for (short k = 0; k < arr.count; k++) {
-//            if ([self.userControl.user.userCity isEqualToString:arr[k]]) {
-//                cityNum = k;
-//                break;
-//            }
-//        }
-//        _selectedIndex = [NSIndexPath indexPathForItem:cityNum inSection:provinceNum];
-//    }
-//    return _selectedIndex;
-//}
+- (NSArray *)areaData
+{
+    if (_areaData == nil) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"areaDict.plist" ofType:nil];
+        NSArray *arr = [NSArray arrayWithContentsOfFile:path];
+        _areaData = arr.copy;
+    }
+    return _areaData;
+}
+
+- (NSIndexPath *)selectedIndex
+{
+    if (_selectedIndex == nil) {
+        short provinceNum = 0;
+        short cityNum = 0;
+        for (short i = 0; i < self.areaData.count; i++) {
+            if ([self.firstTextInfo.text isEqualToString:self.areaData[i][@"province"]]) {
+                provinceNum = i;
+                break;
+            }
+        }
+
+        NSArray *arr = [self.areaData[provinceNum] valueForKey:@"city"];
+        for (short k = 0; k < arr.count; k++) {
+            if ([self.secTextInfo.text isEqualToString:arr[k]]) {
+                cityNum = k;
+                break;
+            }
+        }
+        _selectedIndex = [NSIndexPath indexPathForItem:cityNum inSection:provinceNum];
+    }
+    return _selectedIndex;
+}
 
 @end

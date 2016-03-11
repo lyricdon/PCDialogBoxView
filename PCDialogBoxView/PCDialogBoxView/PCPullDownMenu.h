@@ -10,6 +10,7 @@
 
 @interface PCPullDownMenu : UITableView
 
-+ (instancetype)pullDownMenuWithView:(UIView *)aView;
++ (instancetype)pullDownMenuWithView:(UIView *)aView delegate:(id)aDelegate
+;
 
 @end

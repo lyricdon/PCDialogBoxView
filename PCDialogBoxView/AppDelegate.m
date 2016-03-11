@@ -18,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    UIViewController *viewController = [[UIViewController alloc] init];
+    viewController.view.backgroundColor = [UIColor orangeColor];
+    
     UIButton *nameButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     nameButton.backgroundColor = [UIColor redColor];
     [nameButton setTitle:@"昵称/性别" forState:UIControlStateNormal];
@@ -41,14 +44,13 @@
     [emailButton setTitle:@"邮箱" forState:UIControlStateNormal];
     emailButton.tag = PCDialogBoxViewStyleEmail;
     [emailButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIViewController *viewController = [[UIViewController alloc] init];
-    viewController.view.backgroundColor = [UIColor orangeColor];
+
     [viewController.view addSubview:nameButton];
     [viewController.view addSubview:phoneButton];
     [viewController.view addSubview:addressButton];
     [viewController.view addSubview:emailButton];
     
+   
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
